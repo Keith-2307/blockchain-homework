@@ -259,6 +259,25 @@ Once you get the chain running, copy and paste the commands you used for each no
 
 ### With both nodes up and running, the blockchain can be added to the MyCrypto APP for testing.
 
+Open the MyCrypto app, then click Change Network at the bottom left:  
+![Picture36](https://user-images.githubusercontent.com/83662813/134553779-d047de90-afb6-476d-814b-75c27cd82092.png)
+
+Click "Add Custom Node", then add the custom network information that you set in the genesis.
+![Picture37](https://user-images.githubusercontent.com/83662813/134554119-7224db42-d951-4495-9617-7c6f5a2b068d.png)  
+
+Setup your **Custom Node** as follows:
+
+o	Make sure that you scroll down to choose **Custom** in the "Network" column to reveal more options like **Chain ID**:  
+
+o	Type **ETH** in the Currency box.  
+
+o	In the Chain ID box, type the chain id you generated during genesis creation  
+
+o	In the URL box type: **http://127.0.0.1:8545.** This points to the default RPC port on your local machine. It is recommended that you type the URL as shown above without the (s) after http. 
+
+Finally, click **Save & Use Custom Node**
+
+
 
 
 
