@@ -137,7 +137,8 @@ Use the **conda list** function with a **grep** argument to identify if the **bi
  
    **./geth --datadir node1 account new** 
              
-You will be prompted to enter a password: For simplicity and convenience, we recommend using the following password: **2468**, confirm password when prompted before moving forward.
+You will be prompted to enter a password: For simplicity and convenience, we recommend using the following password: **2468**, confirm password when prompted before moving forward.  
+
 The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
 
 example of a 'Public address key’:  
@@ -145,7 +146,8 @@ example of a 'Public address key’:
 
 You will also be given a secret Key which has to be saved to your notepad txt file as well.  
 
-Example of a path to the 'Secret key': **UTC--2021-09-20T14-36-45.255541500Z--623027e7c5ffd773c7078fced62f8fe9c874542d**  
+Example of a path to the 'Secret key': 
+**UTC--2021-09-20T14-36-45.255541500Z--623027e7c5ffd773c7078fced62f8fe9c874542d**  
 
 o	From your gitbash Terminal, in the Ethereum environment, run the command:
 **./geth --datadir node2 account new**  
@@ -157,7 +159,8 @@ example of a 'Public address key’:
 
 You will also be given a secret Key which has to be saved to your notepad txt file as well.  
 
-Example of a path to the 'Secret key':**UTC--2021-09-20T14-39-30.591617600Z--442740cc829f0c88695471c5272bec6b602c207f**
+Example of a path to the 'Secret key':
+**UTC--2021-09-20T14-39-30.591617600Z--442740cc829f0c88695471c5272bec6b602c207f**
 
 ![Picture18](https://user-images.githubusercontent.com/83662813/134544663-15a2e9ce-6598-4cf1-9c52-660673e0a324.png)  
 
@@ -210,15 +213,51 @@ Using **geth**, initialize each node with the new **zbanknet.json**.
 **./geth --datadir node1 init zbanknet/zbanknet.json**  
 
 **./geth --datadir node2 init zbanknet/zbanknet.json**  
-![Picture32](https://user-images.githubusercontent.com/83662813/134548410-196859d2-e63c-475b-99a3-6927e62e1c39.png)
+![Picture32](https://user-images.githubusercontent.com/83662813/134548410-196859d2-e63c-475b-99a3-6927e62e1c39.png)  
 
+## Activate your local blockchain  
 
+With your MyCrypto Wallet installed and the Ethereum Environment in place, we can now proceed to activate our Blockchain. Follow these instructions to get your local Ethereum-based blockchain mining. Using this, you can build a cheat sheet to get your geth nodes up and running anytime.  
 
+**This is done as follows:**
+**1.	Start Node1**
+Start the first node by opening a new terminal and running the following command, the "SEALER_ONE_ADDRESS" must be substituted with the public address of the first node that was created in the previous session (do **not** include the leading **0x**). Please ensure you are in the Ethereum environment and in the Blockchain-Tools folder.
 
+o	**./geth --datadir node1 --unlock** "SEALER_ONE_ADDRESS" **--mine --minerthreads 1 --allow-insecure-unlock**
 
+o	Terminal 1 Command: **./geth --datadir node1 --unlock "** 0x246C401561ECd83F5f5022798f7D6Fc23C447127" **--mine --minerthreads 1 --allow-insecure-unlock**
+![Picture33](https://user-images.githubusercontent.com/83662813/134550147-30ea68ca-7098-4338-9a9f-837f14d7d20d.png)
 
+o	Important: Type your password and hit enter when prompted – *Entering your password may not be visible!*   
 
+o	Copy the resulting enode address from the terminal to your notepad.
+**"enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303"** 
 
+**2.	Start Node2**  
+
+Please note that this installation and process is strictly to be done on a windows-based system, should anyone require these installations to be done on another system other than windows please contact the I.T. department for the system base installations instructions.
+
+**Windows Install:**
+
+o	Start node two by opening a second new terminal and running the following command:  
+
+**./geth --datadir node2 --unlock** "SEALER_TWO_ADDRESS" **--port 30304 --rpc --bootnodes** "SEALER_ONE_ENODE_ADDRESS" **–ipcdisable --allow-insecure-unlock**  
+
+o	Substitute the "SEALER_TWO_ADDRESS" with the the public address of the second node that was created in the previous session. (Do **not** include the leading 0x).  
+
+o	Substitute the "SEALER_ONE_ENODE_ADDRESS" with the enode address of node 1 that was copied in step 1.
+
+o	Terminal 2 Command: **./geth --datadir node2 --unlock** "0x78f8306ef80dD7c73c17a541c3C776517A6432A0" **--port 30304 --rpc --bootnodes** "enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303" **–-ipcdisable --allow-insecure-unlock**  
+![Picture34](https://user-images.githubusercontent.com/83662813/134552469-ed7a0bed-aa35-44fe-8f2d-39af908a349b.png)
+o	**Important:** Type your password and hit enter when prompted – *Entering your password may not be visible!* 
+
+The display below shows your Terminal outputs.
+![Picture35](https://user-images.githubusercontent.com/83662813/134553050-a0065e33-3449-479d-9a78-3d44aa056b14.png)  
+o	The chain should be up and running after you start the second node.  
+
+Once you get the chain running, copy and paste the commands you used for each node into a README.md inside your network's folder. This will allow you to get your chain started anytime.
+
+### With both nodes up and running, the blockchain can be added to the MyCrypto APP for testing.
 
 
 
