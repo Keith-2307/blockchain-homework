@@ -276,6 +276,55 @@ o	In the Chain ID box, type the chain id you generated during genesis creation
 o	In the URL box type: **http://127.0.0.1:8545.** This points to the default RPC port on your local machine. It is recommended that you type the URL as shown above without the (s) after http. 
 
 Finally, click **Save & Use Custom Node**
+![Picture38](https://user-images.githubusercontent.com/83662813/134555261-faa45e72-624e-4f1b-b071-ec93544af976.gif)
+
+### After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
+o	Select the View & Send option from the left menu pane, then click Keystore file.  
+![Picture39](https://user-images.githubusercontent.com/83662813/134555629-dfaec184-4475-45b3-8d9e-ca2a9d74dbd4.png)  
+
+o	On the next screen, **click Select Wallet File**, then navigate to the keystore folder inside your Node1 directory(see step2), select the file located there, provide your password (step3) when prompted and then click **Unlock**.
+
+Step 1.
+![Picture40](https://user-images.githubusercontent.com/83662813/134555974-b8f13007-98e9-4786-9182-0ed8b6756546.png)  
+
+Step 2.
+![Picture41](https://user-images.githubusercontent.com/83662813/134556133-675923ea-9f54-44f0-b380-3699602ed645.png)
+
+Step 3.**Password: 2468**
+![Picture42](https://user-images.githubusercontent.com/83662813/134556518-698663e0-6bd9-4629-96b8-0e0552c71dec.png)  
+
+o	This will open your Zbanknet account wallet inside MyCrypto.
+
+o	The balance that was pre-funded for this account in the genesis configuration is shown in your wallet; Please note that these millions of ETH tokens are just for testing purposes. 
+![Picture43](https://user-images.githubusercontent.com/83662813/134556704-f6ba8caa-dd9c-41b8-b9b5-9a48eba473b7.png)  
+
+o	In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH: Recommended 10,000 ETH.
+
+o	Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
+![Picture44](https://user-images.githubusercontent.com/83662813/134556901-a2b33702-1a11-487b-a347-b3f4382b6b9e.gif)
+
+Click the Check TX Status when the message pops up, confirm the logout:
+![Picture45](https://user-images.githubusercontent.com/83662813/134557046-fb8b81c7-bb0c-42f2-8fd1-53ebd8e5133a.gif)
+
+The transaction confirmation will change from **Pending** to **Successful** in around the same blocktime you set in the genesis.
+![Picture46](https://user-images.githubusercontent.com/83662813/134557412-dfcf4503-1a16-4373-89cd-be12b8ba6456.png)  
+
+Terminal Confirmation of transaction:  
+![Picture47](https://user-images.githubusercontent.com/83662813/134557648-86e1bce9-4d5b-4019-8a91-a461dcc3eac4.png)
+
+The following screen will show the transaction of the recommended 10,000 ETH is pending to transfer to your Node 2 address:
+![Picture48](https://user-images.githubusercontent.com/83662813/134557873-e57d2de1-db2d-48f3-9765-e8af15987eea.png)
+
+You can click the Check TX Status button to update the status.
+![Picture49](https://user-images.githubusercontent.com/83662813/134558302-2a6cffa9-e22c-4cef-828f-a1e35511b4f3.png)
+
+*Congratulations, you successfully created your own private blockchain network! – Zbanknet, and transferred 10000 ETH from account: Node1 to Node2.*
+
+(Screen shot of Successful Transaction)
+
+
+
+
 
 
 
