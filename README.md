@@ -109,7 +109,7 @@ We can move to the third step: Setting up your Ethereum Environment in Gitbash. 
 
 3.	Install **web3.py** and **bit**, respectively, by running the following commands: 
 
-    **conda install -c conda-forge web3**  
+    **pip install web3**  
 
     **pip install bit**  
 
