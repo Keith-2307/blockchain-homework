@@ -284,13 +284,13 @@ o	Select the View & Send option from the left menu pane, then click Keystore fil
 
 o	On the next screen, **click Select Wallet File**, then navigate to the keystore folder inside your Node1 directory(see step2), select the file located there, provide your password (step3) when prompted and then click **Unlock**.
 
-Step 1.
+**Step 1.**
 ![Picture40](https://user-images.githubusercontent.com/83662813/134555974-b8f13007-98e9-4786-9182-0ed8b6756546.png)  
 
-Step 2.
+**Step 2.**
 ![Picture41](https://user-images.githubusercontent.com/83662813/134556133-675923ea-9f54-44f0-b380-3699602ed645.png)
 
-Step 3.**Password: 2468**
+**Step 3.** *Password: 2468*
 ![Picture42](https://user-images.githubusercontent.com/83662813/134556518-698663e0-6bd9-4629-96b8-0e0552c71dec.png)  
 
 o	This will open your Zbanknet account wallet inside MyCrypto.
@@ -318,7 +318,7 @@ The following screen will show the transaction of the recommended 10,000 ETH is 
 You can click the Check TX Status button to update the status.
 ![Picture49](https://user-images.githubusercontent.com/83662813/134558302-2a6cffa9-e22c-4cef-828f-a1e35511b4f3.png)
 
-*Congratulations, you successfully created your own private blockchain network! – Zbanknet, and transferred 10000 ETH from account: Node1 to Node2.*
+***Congratulations, you successfully created your own private blockchain network! – Zbanknet, and transferred 10000 ETH from account: Node1 to Node2.***
 
 (Screen shot of Successful Transaction)
 
