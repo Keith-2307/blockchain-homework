@@ -77,7 +77,158 @@ The NotePad .txt file should now contain the “Mnemonic Phrase”, the “Publi
 The MyCrypto Wallet is now created and setup. Click on the “Send Ether and Tokens” chevron on the top to return to the wallet’s main page.  
 ![Picture15](https://user-images.githubusercontent.com/83662813/134536693-e763b09c-a2e4-4c03-af85-4cee9a92dbfa.png)  
 
-## Now on to the second part of setting up this Network:
+## Now on to the second part of setting up this Network:  
+**Installing Go Ethereum Tools:**  
+
+Go Ethereum is one of the three original implementations of the Ethereum protocol. It is written in Go, fully open-source and licensed under the GNU LGPL v3. We will be using “Go Ethereum Tools” to create the blockchain for this Testnet project. To provide some insight on the processes to be carried out, we will be creating the blockchain from the “Genesis block” to mine tokens and eventual send a test transaction to a MyCrypto Wallet.  
+
+We will be installing the necessary tools on the ZBank’s windows 10 computers and the following steps are required.  
+
+Open your browser and navigate to the Go Ethereum Tools download page at [geth.ethereum.org/downloads](https://geth.ethereum.org/downloads/)  
+
+Click on the "Geth & Tools 1.9.7 Archive Application" to download the bundle of tools. Please see the steps below to install the Go Ethereum Tools: Scroll down to the "Stable Releases" section and proceed with the download.  
+![Picture16](https://user-images.githubusercontent.com/83662813/134537905-c8b1d0ba-a944-43cd-8180-4f373608edc9.gif)  
+
+Please ensure you are running a 64bit computer to download and install the 64-bit version of the executable file. If not please download the 32-bit version for Microsoft Windows. For assistance in determining whether your computer is 64 or 32-bit please email the I.T. department and we will be happy to help.  
+
+After downloading the tools archive, open your "Downloads" folder, and you will find a file called geth-alltools-windows-amd64-1.9.7-a718daa6.zip. Please note that the last numbers in the filename could vary depending on the last update by the site.  
+
+Decompress the archive in the location of your preference in your computer's hard drive and rename the containing folder as Blockchain-Tools. I recommend using a location that can be easily accessed from the terminal window like the user's home directory.  
+
+## With the Go Ethereum Tools downloaded and Saved to your renamed folder: Blockchain-Tools 
+
+We can move to the third step: Setting up your Ethereum Environment in Gitbash. This can be done by following the steps below:  
+
+1.	Open your GitBash Terminal and execute the following commands to install **web3.py** and **bit**, respectively. However, we need to create an environment to run the Ethereum testnet transaction. The Ethereum Environment is created as follows:  
+
+     **conda create -n ethereum** python=3.7 **anaconda**  
+
+2.	Activate the Ethereum environment that you created by executing the following:  
+
+    **conda activate Ethereum**  
+
+3.	Install **web3.py** and **bit**, respectively, by running the following commands: 
+
+    **conda install -c conda-forge web3**  
+
+    **pip install bit**  
+
+#### It is recommended that you verify the installs have been successful before proceeding, 
+
+Use the **pip list** function with a **grep** argument to identify if the **web3** library installed successfully.  
+
+   **pip list | grep web3**  
+    
+Use the **conda list** function with a **grep** argument to identify if the **bit** library installed successfully  
+
+   **pip list | grep bit**  
+    
+![Picture17](https://user-images.githubusercontent.com/83662813/134540500-4fc9ef1b-8894-402a-8852-891e7cc45b4e.png)  
+
+## Create Node accounts in the Ethereum Environment
+
+1. With your Terminal in the Ethereum Environment, navidate to a folder **Blockchain-Tools** and create the node accounts “Node1” and “Node2”. Your block chain folder can be opened by the command:  
+
+   **$cd Blockchain-Tools**  
+            
+ **Please see the steps below to create the accounts:**   
+ 
+ o	From your gitbash Terminal, in the Ethereum environment, run the command:  
+ 
+   **./geth --datadir node1 account new** 
+             
+You will be prompted to enter a password: For simplicity and convenience, we recommend using the following password: **2468**, confirm password when prompted before moving forward.
+The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
+
+example of a 'Public address key’:  
+**0x623027E7C5FFD773c7078FCED62f8FE9c874542d**
+
+You will also be given a secret Key which has to be saved to your notepad txt file as well.  
+
+Example of a path to the 'Secret key': **UTC--2021-09-20T14-36-45.255541500Z--623027e7c5ffd773c7078fced62f8fe9c874542d**  
+
+o	From your gitbash Terminal, in the Ethereum environment, run the command:
+**./geth --datadir node2 account new**  
+
+The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
+
+example of a 'Public address key’: 
+**0x442740Cc829F0c88695471c5272BeC6B602C207F**  
+
+You will also be given a secret Key which has to be saved to your notepad txt file as well.  
+
+Example of a path to the 'Secret key':**UTC--2021-09-20T14-39-30.591617600Z--442740cc829f0c88695471c5272bec6b602c207f**
+
+![Picture18](https://user-images.githubusercontent.com/83662813/134544663-15a2e9ce-6598-4cf1-9c52-660673e0a324.png)  
+
+2.	The next step is to use node1 and node2 to generate the “Genesis block”. This is done by running the following command in the Ethereum Environment from your terminal in your **Blockchain-Tools** folder:  
+
+  **./puppeth**  
+  
+  ![Picture19](https://user-images.githubusercontent.com/83662813/134545051-4b8eff14-c80a-40c3-9f4e-a78a7950aa2f.png)  
+  
+It is now recommended that you name your network to ‘zbanknet’. It is recommended that you type this network name in your terminal as shown and expect the following response.  
+![Picture20](https://user-images.githubusercontent.com/83662813/134545331-902f76ea-7d9a-4701-ae06-091aa30b7f34.png)   
+
+Type 2, and enter to select: Configure new genesis  
+![Picture21](https://user-images.githubusercontent.com/83662813/134545631-4865f9b3-a7d6-4926-8278-2b9bdd1f09bb.png)  
+
+Type 1, and enter to select: Create new genesis from scratch  
+![Picture22](https://user-images.githubusercontent.com/83662813/134545826-3b1985c4-5d12-40e5-999f-e33e11436995.png)  
+
+Type 2, and enter to select: Clique – proof-of-authority  
+![Picture23](https://user-images.githubusercontent.com/83662813/134546025-7110acd1-7531-41f6-bb6d-ffb5ec0bf9ca.png)  
+
+Type 15 and enter for the seconds each block should take.  
+![Picture24](https://user-images.githubusercontent.com/83662813/134546245-12153425-682d-4c4e-9f5e-973b7a4fef92.png)  
+
+Paste both account addresses from the first step one at a time into the list of accounts to seal. Copy and paste the public address for node one here, when answering the following “Which accounts are allowed to seal?” (Mandatory at least one) Please omit the “0x” from the copied address.  
+![Picture25](https://user-images.githubusercontent.com/83662813/134546560-e272c378-f705-4493-9cf7-1e018b136ceb.png)  
+
+Paste both account addresses from the first step again in the list of accounts to pre-funded. There are no block rewards in Proof of Authority (POA), so you'll need to pre-fund.  
+![Picture26](https://user-images.githubusercontent.com/83662813/134546797-6fe09ae0-1ec5-462f-a22b-2d9c0b6f7302.png)  
+
+You are requested to press **enter** to move on from the screen below: for pre-funding the pre-compiled accounts (0x1 .. 0xff) with wei. This keeps the genesis cleaner.  
+![Picture27](https://user-images.githubusercontent.com/83662813/134547043-10d91990-474d-4b98-a5dc-8e6e035a6e76.png)  
+
+At the next prompt: Specify your chain/network ID if you want an explicit one (default = random) Please enter:		**777**
+![Picture28](https://user-images.githubusercontent.com/83662813/134547258-3d5a585a-2f8f-43a7-bdd3-c24936ee6d31.png)  
+
+Please select option 2, for Manage existing genesis.  
+![Picture29](https://user-images.githubusercontent.com/83662813/134547603-1ace3473-9e98-4e67-bc98-2083fb112fcf.png)  
+
+Please select option 2, for Export genesis configurations.  
+![Picture30](https://user-images.githubusercontent.com/83662813/134547775-380f9c9f-099f-42bf-99c7-a6a006cec22f.png)  
+
+Please type the zbanknet to save to the desired folder, when answering the question: Which folder to save the genesis specs into? Then exit the running terminal.  
+![Picture31](https://user-images.githubusercontent.com/83662813/134547975-c945103a-26d9-4e6c-88e6-5e04e291d0e1.png)  
+
+With the genesis block creation completed, we will now initialize the nodes with the genesis' json file.  
+
+Using **geth**, initialize each node with the new **zbanknet.json**.  
+
+**./geth --datadir node1 init zbanknet/zbanknet.json**  
+
+**./geth --datadir node2 init zbanknet/zbanknet.json**  
+![Picture32](https://user-images.githubusercontent.com/83662813/134548410-196859d2-e63c-475b-99a3-6927e62e1c39.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
 
 
 
