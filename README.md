@@ -322,8 +322,32 @@ You can click the Check TX Status button to update the status.
 
 (Screen shot of Successful Transaction)
 
+## As ZBank employees you may encounter the following Difficulties:
 
+The nodes require significant RAM/memory to be executed and a 4-gigabit machine do not possess sufficient capacity to run the nodes. As a result, the terminal nodes will become stagnant and eventual give the following errors:
+1.Peer Connection dropped
+(screen shot)
 
+2. Fail Connection: after sitting Idle for more than 30 minutes.
+(screen shot)
+
+3. Unsolicited response received on idle HTTP channel
+![Picture51](https://user-images.githubusercontent.com/83662813/134786740-6674c08d-c0b7-4e39-99ea-395d8d042f41.png)  
+
+**Note:**  
+
+To ensure your computer system isn’t running at max memory capacity during the mining process, please navigate your mouse to the date and time display on your bottom right in the task bar. Right click, then scroll to Task Manager on the list, click select to illustrate the processes (Display 1) currently running as well as the performance (Display 2) tab to display your memory usage during this process.
+
+Display 1: Running Processes
+![Picture52](https://user-images.githubusercontent.com/83662813/134786768-10e0d44e-4dec-41e3-9484-5a6d1ad67048.png)  
+
+Display 2: Memory Usage on GPU
+![Picture53](https://user-images.githubusercontent.com/83662813/134786784-23a1ef90-48bb-4307-ac91-9eb6e8294e81.png)  
+
+If the values displayed are like your operating system, then you will not be able to mine the Blockchains as required. We encountered similar issues with our main operating system and had to use a different computer to test this setup. We therefore recommend a complete install of all the preliminary setups as per the information provided, such as installing dependencies and environment configuration. 
+
+Thank you
+Keith Louis **(Manager, ZBank BlockChain Solutions)** 
 
 
 
