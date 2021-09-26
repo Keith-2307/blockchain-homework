@@ -317,8 +317,7 @@ You can click the Check TX Status button to update the status.
 ![Picture49](https://user-images.githubusercontent.com/83662813/134558302-2a6cffa9-e22c-4cef-828f-a1e35511b4f3.png)
 
 ***Congratulations, you successfully created your own private blockchain network! – Zbanknet, and transferred 10000 ETH from account: Node1 to Node2.***
-
-(Screen shot of Successful Transaction)
+![Picture50](https://user-images.githubusercontent.com/83662813/134817505-489a4303-1ce7-4441-ba49-21e71257d85d.png)
 
 ## As ZBank employees you may encounter the following Difficulties:
 
