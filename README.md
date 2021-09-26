@@ -294,12 +294,13 @@ Finally, click **Save & Use Custom Node**
     o	This will open your Zbanknet account wallet inside MyCrypto.
 
     o	The balance that was pre-funded for this account in the genesis configuration is shown in your wallet; Please note that these millions of ETH tokens are just for testing purposes. 
-![Picture43](https://user-images.githubusercontent.com/83662813/134556704-f6ba8caa-dd9c-41b8-b9b5-9a48eba473b7.png)  
+   ![Picture43](https://user-images.githubusercontent.com/83662813/134556704-f6ba8caa-dd9c-41b8-b9b5-9a48eba473b7.png)  
 
     o	In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH: Recommended 10,000 ETH.
+   ![Picture44](https://user-images.githubusercontent.com/83662813/134556901-a2b33702-1a11-487b-a347-b3f4382b6b9e.gif)
 
     o	Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![Picture44](https://user-images.githubusercontent.com/83662813/134556901-a2b33702-1a11-487b-a347-b3f4382b6b9e.gif)
+   ![confirmtx](https://user-images.githubusercontent.com/83662813/134817759-87607a1c-9e6e-465a-ac9e-959283e1cc2d.png)
 
 Click the Check TX Status when the message pops up, confirm the logout:
 ![Picture45](https://user-images.githubusercontent.com/83662813/134557046-fb8b81c7-bb0c-42f2-8fd1-53ebd8e5133a.gif)
