@@ -129,44 +129,42 @@ Use the **conda list** function with a **grep** argument to identify if the **bi
 
 1. With your Terminal in the Ethereum Environment, navidate to a folder **Blockchain-Tools** and create the node accounts “Node1” and “Node2”. Your block chain folder can be opened by the command:  
 
-   **$cd Blockchain-Tools**  
+      **$cd Blockchain-Tools**  
             
- **Please see the steps below to create the accounts:**   
+      **Please see the steps below to create the accounts:**   
  
- o	From your gitbash Terminal, in the Ethereum environment, run the command:  
+            o	From your gitbash Terminal, in the Ethereum environment, run the command:  
  
-   **./geth --datadir node1 account new** 
+      **./geth --datadir node1 account new** 
              
-You will be prompted to enter a password: For simplicity and convenience, we recommend using the following password: **2468**, confirm password when prompted before moving forward.  
-
-The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
+You will be prompted to enter a password: For simplicity and convenience, we recommend using the following password: **2468**, confirm password when prompted before moving forward. The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
 
 example of a 'Public address key’:  
-**0x623027E7C5FFD773c7078FCED62f8FE9c874542d**
+      **0x623027E7C5FFD773c7078FCED62f8FE9c874542d**
 
 You will also be given a secret Key which has to be saved to your notepad txt file as well.  
 
 Example of a path to the 'Secret key': 
-**UTC--2021-09-20T14-36-45.255541500Z--623027e7c5ffd773c7078fced62f8fe9c874542d**  
+     **UTC--2021-09-20T14-36-45.255541500Z--623027e7c5ffd773c7078fced62f8fe9c874542d**  
 
-o	From your gitbash Terminal, in the Ethereum environment, run the command:
-**./geth --datadir node2 account new**  
+            o	From your gitbash Terminal, in the Ethereum environment, run the command:
+   **./geth --datadir node2 account new**  
 
 The resulting public address key, which will be required later, should be copied, and saved to your notepad txt file.  
 
-example of a 'Public address key’: 
-**0x442740Cc829F0c88695471c5272BeC6B602C207F**  
+Example of a 'Public address key’: 
+       **0x442740Cc829F0c88695471c5272BeC6B602C207F**  
 
 You will also be given a secret Key which has to be saved to your notepad txt file as well.  
 
 Example of a path to the 'Secret key':
-**UTC--2021-09-20T14-39-30.591617600Z--442740cc829f0c88695471c5272bec6b602c207f**
+        **UTC--2021-09-20T14-39-30.591617600Z--442740cc829f0c88695471c5272bec6b602c207f**
 
 ![Picture18](https://user-images.githubusercontent.com/83662813/134544663-15a2e9ce-6598-4cf1-9c52-660673e0a324.png)  
 
 2.	The next step is to use node1 and node2 to generate the “Genesis block”. This is done by running the following command in the Ethereum Environment from your terminal in your **Blockchain-Tools** folder:  
 
-  **./puppeth**  
+      **./puppeth**  
   
   ![Picture19](https://user-images.githubusercontent.com/83662813/134545051-4b8eff14-c80a-40c3-9f4e-a78a7950aa2f.png)  
   
@@ -210,9 +208,9 @@ With the genesis block creation completed, we will now initialize the nodes with
 
 Using **geth**, initialize each node with the new **zbanknet.json**.  
 
-**./geth --datadir node1 init zbanknet/zbanknet.json**  
+   **./geth --datadir node1 init zbanknet/zbanknet.json**  
 
-**./geth --datadir node2 init zbanknet/zbanknet.json**  
+   **./geth --datadir node2 init zbanknet/zbanknet.json**  
 ![Picture32](https://user-images.githubusercontent.com/83662813/134548410-196859d2-e63c-475b-99a3-6927e62e1c39.png)  
 
 ## Activate your local blockchain  
@@ -223,15 +221,15 @@ With your MyCrypto Wallet installed and the Ethereum Environment in place, we ca
 **1.	Start Node1**
 Start the first node by opening a new terminal and running the following command, the "SEALER_ONE_ADDRESS" must be substituted with the public address of the first node that was created in the previous session (do **not** include the leading **0x**). Please ensure you are in the Ethereum environment and in the Blockchain-Tools folder.
 
-o	**./geth --datadir node1 --unlock** "SEALER_ONE_ADDRESS" **--mine --minerthreads 1 --allow-insecure-unlock**
+   o **./geth --datadir node1 --unlock** "SEALER_ONE_ADDRESS" **--mine --minerthreads 1 --allow-insecure-unlock**
 
-o	Terminal 1 Command: **./geth --datadir node1 --unlock "** 0x246C401561ECd83F5f5022798f7D6Fc23C447127" **--mine --minerthreads 1 --allow-insecure-unlock**
+   o   Terminal 1 Command: **./geth --datadir node1 --unlock "** 0x246C401561ECd83F5f5022798f7D6Fc23C447127" **--mine --minerthreads 1 --allow-insecure-unlock**
 ![Picture33](https://user-images.githubusercontent.com/83662813/134550147-30ea68ca-7098-4338-9a9f-837f14d7d20d.png)
 
-o	Important: Type your password and hit enter when prompted – *Entering your password may not be visible!*   
+   o	Important: Type your password and hit enter when prompted – *Entering your password may not be visible!*   
 
-o	Copy the resulting enode address from the terminal to your notepad.
-**"enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303"** 
+   o	Copy the resulting enode address from the terminal to your notepad.
+     **"enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303"** 
 
 **2.	Start Node2**  
 
@@ -239,21 +237,21 @@ Please note that this installation and process is strictly to be done on a windo
 
 **Windows Install:**
 
-o	Start node two by opening a second new terminal and running the following command:  
+   o	Start node two by opening a second new terminal and running the following command:  
 
-**./geth --datadir node2 --unlock** "SEALER_TWO_ADDRESS" **--port 30304 --rpc --bootnodes** "SEALER_ONE_ENODE_ADDRESS" **–ipcdisable --allow-insecure-unlock**  
+   **./geth --datadir node2 --unlock** "SEALER_TWO_ADDRESS" **--port 30304 --rpc --bootnodes** "SEALER_ONE_ENODE_ADDRESS" **–ipcdisable --allow-insecure-unlock**  
 
-o	Substitute the "SEALER_TWO_ADDRESS" with the the public address of the second node that was created in the previous session. (Do **not** include the leading 0x).  
+   o	Substitute the "SEALER_TWO_ADDRESS" with the the public address of the second node that was created in the previous session. (Do **not** include the leading 0x).  
 
-o	Substitute the "SEALER_ONE_ENODE_ADDRESS" with the enode address of node 1 that was copied in step 1.
+   o	Substitute the "SEALER_ONE_ENODE_ADDRESS" with the enode address of node 1 that was copied in step 1.
 
-o	Terminal 2 Command: **./geth --datadir node2 --unlock** "0x78f8306ef80dD7c73c17a541c3C776517A6432A0" **--port 30304 --rpc --bootnodes** "enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303" **–-ipcdisable --allow-insecure-unlock**  
+   o    Terminal 2 Command: **./geth --datadir node2 --unlock** "0x78f8306ef80dD7c73c17a541c3C776517A6432A0" **--port 30304 --rpc --bootnodes** "enode://c68da51cda265fae6cdae610c948b117b346c4676a4bde713995af8641978329000669104e74c824f6e284f5ab18a7526682207da7ede0e812235a6c56700362@127.0.0.1:30303" **–-ipcdisable --allow-insecure-unlock**  
 ![Picture34](https://user-images.githubusercontent.com/83662813/134552469-ed7a0bed-aa35-44fe-8f2d-39af908a349b.png)
-o	**Important:** Type your password and hit enter when prompted – *Entering your password may not be visible!* 
+    o	**Important:** Type your password and hit enter when prompted – *Entering your password may not be visible!* 
 
 The display below shows your Terminal outputs.
 ![Picture35](https://user-images.githubusercontent.com/83662813/134553050-a0065e33-3449-479d-9a78-3d44aa056b14.png)  
-o	The chain should be up and running after you start the second node.  
+    o	The chain should be up and running after you start the second node.  
 
 Once you get the chain running, copy and paste the commands you used for each node into a README.md inside your network's folder. This will allow you to get your chain started anytime.
 
@@ -267,22 +265,22 @@ Click "Add Custom Node", then add the custom network information that you set in
 
 Setup your **Custom Node** as follows:
 
-o	Make sure that you scroll down to choose **Custom** in the "Network" column to reveal more options like **Chain ID**:  
+   o	Make sure that you scroll down to choose **Custom** in the "Network" column to reveal more options like **Chain ID**:  
 
-o	Type **ETH** in the Currency box.  
+   o	Type **ETH** in the Currency box.  
 
-o	In the Chain ID box, type the chain id you generated during genesis creation  
+   o	In the Chain ID box, type the chain id you generated during genesis creation  
 
-o	In the URL box type: **http://127.0.0.1:8545.** This points to the default RPC port on your local machine. It is recommended that you type the URL as shown above without the (s) after http. 
+   o	In the URL box type: **http://127.0.0.1:8545.** This points to the default RPC port on your local machine. It is recommended that you type the URL as shown above without the (s) after http. 
 
 Finally, click **Save & Use Custom Node**
 ![Picture38](https://user-images.githubusercontent.com/83662813/134555261-faa45e72-624e-4f1b-b071-ec93544af976.gif)
 
 ### After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
-o	Select the View & Send option from the left menu pane, then click Keystore file.  
+   o	Select the View & Send option from the left menu pane, then click Keystore file.  
 ![Picture39](https://user-images.githubusercontent.com/83662813/134555629-dfaec184-4475-45b3-8d9e-ca2a9d74dbd4.png)  
 
-o	On the next screen, **click Select Wallet File**, then navigate to the keystore folder inside your Node1 directory(see step2), select the file located there, provide your password (step3) when prompted and then click **Unlock**.
+   o	On the next screen, **click Select Wallet File**, then navigate to the keystore folder inside your Node1 directory(see step2), select the file located there, provide your password (step3) when prompted and then click **Unlock**.
 
 **Step 1.**
 ![Picture40](https://user-images.githubusercontent.com/83662813/134555974-b8f13007-98e9-4786-9182-0ed8b6756546.png)  
@@ -293,14 +291,14 @@ o	On the next screen, **click Select Wallet File**, then navigate to the keystor
 **Step 3.** *Password: 2468*
 ![Picture42](https://user-images.githubusercontent.com/83662813/134556518-698663e0-6bd9-4629-96b8-0e0552c71dec.png)  
 
-o	This will open your Zbanknet account wallet inside MyCrypto.
+    o	This will open your Zbanknet account wallet inside MyCrypto.
 
-o	The balance that was pre-funded for this account in the genesis configuration is shown in your wallet; Please note that these millions of ETH tokens are just for testing purposes. 
+    o	The balance that was pre-funded for this account in the genesis configuration is shown in your wallet; Please note that these millions of ETH tokens are just for testing purposes. 
 ![Picture43](https://user-images.githubusercontent.com/83662813/134556704-f6ba8caa-dd9c-41b8-b9b5-9a48eba473b7.png)  
 
-o	In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH: Recommended 10,000 ETH.
+    o	In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH: Recommended 10,000 ETH.
 
-o	Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
+    o	Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
 ![Picture44](https://user-images.githubusercontent.com/83662813/134556901-a2b33702-1a11-487b-a347-b3f4382b6b9e.gif)
 
 Click the Check TX Status when the message pops up, confirm the logout:
@@ -325,11 +323,11 @@ You can click the Check TX Status button to update the status.
 ## As ZBank employees you may encounter the following Difficulties:
 
 The nodes require significant RAM/memory to be executed and a 4-gigabit machine do not possess sufficient capacity to run the nodes. As a result, the terminal nodes will become stagnant and eventual give the following errors:
-1.Peer Connection dropped
-(screen shot)
+1.Failed connection error: Signed Recently, must wait for others. – Node 1
+![Picture54](https://user-images.githubusercontent.com/83662813/134790118-842c3a10-5e63-4a37-9fc3-aa0494f263e7.png)
 
-2. Fail Connection: after sitting Idle for more than 30 minutes.
-(screen shot)
+2.Synchronisation failed, dropping peer. “Action from bad peer ignored”. – Node 2
+![Picture55](https://user-images.githubusercontent.com/83662813/134790125-ff15e9cb-36e8-4e1e-9984-21acd8cfd1bd.png)
 
 3. Unsolicited response received on idle HTTP channel
 ![Picture51](https://user-images.githubusercontent.com/83662813/134786740-6674c08d-c0b7-4e39-99ea-395d8d042f41.png)  
