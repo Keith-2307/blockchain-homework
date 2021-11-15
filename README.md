@@ -1,4 +1,4 @@
-# blockchain-homework
+# blockchain
 
 ## Proof of Authority Development Chain
 
